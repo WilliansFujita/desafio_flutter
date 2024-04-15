@@ -2,9 +2,10 @@
 import 'package:flutter/widgets.dart';
 
 class HeroImage extends StatelessWidget {
-  const HeroImage({
+
+
+  const HeroImage(this.photoPath, {
     super.key,
-    required this.photoPath,
   });
 
   final String photoPath;

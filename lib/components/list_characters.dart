@@ -32,7 +32,8 @@ class ListCharacters extends StatelessWidget {
         ),
         ListView(
           shrinkWrap: true,
-          children: heroes.map((hero) => ItemListCharacter(hero.name, hero.photoPath)).toList(),
+          children: heroes.map((hero) => ItemListCharacter(hero.id,  hero.name, hero.photoPath, hero.description)).toList(),
+        
         ),
       ],
     );

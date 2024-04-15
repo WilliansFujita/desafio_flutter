@@ -3,8 +3,8 @@ import 'package:desafio_flutter_hero/components/pagination_navigation_bar.dart';
 import 'package:desafio_flutter_hero/components/searchbar.dart';
 import 'package:desafio_flutter_hero/components/texttittle.dart';
 import 'package:desafio_flutter_hero/dto/hero_dto.dart';
-import 'package:desafio_flutter_hero/usecase/fectch_hero_input.dart';
-import 'package:desafio_flutter_hero/usecase/fectch_hero_usecase.dart';
+import 'package:desafio_flutter_hero/usecase/heroes/fetch_all/fetch_hero_input.dart';
+import 'package:desafio_flutter_hero/usecase/heroes/fetch_all/fetch_hero_usecase.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
