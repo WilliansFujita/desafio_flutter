@@ -15,7 +15,8 @@ class FetchHeroUseCase{
     try{
       dynamic responseJson = await apiService.fetchData(input.searchName, input.page);
       var heroes = HeroDTO.fromJsonList(responseJson["data"]["results"]);
-      return FetchHeroOutPut(heroes: heroes, count: responseJson["data"]["total"]);
+      double finalPage = responseJson["data"]["total"]!=0 ? responseJson["data"]["total"] / 4: 0;
+      return FetchHeroOutPut(heroes: heroes, count: responseJson["data"]["total"], finalPage:finalPage.floor() );
     }catch(e){
       throw Exception("Error on fetch.");
     }

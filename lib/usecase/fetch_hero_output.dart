@@ -6,6 +6,7 @@ class FetchHeroOutPut{
 
   final List<HeroDTO> heroes;
   final int count;
+  final int finalPage;
 
-  FetchHeroOutPut({required this.heroes, required this.count});
+  FetchHeroOutPut({required this.heroes, required this.count, required this.finalPage});
 }

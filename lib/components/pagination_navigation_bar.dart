@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class PaginationNavigationBar extends StatefulWidget {
   final int page;
+  final int finalPage;
   final Function onChange;
 
-
-  const PaginationNavigationBar(this.page, this.onChange, {super.key});
+  const PaginationNavigationBar(this.page, this.finalPage, this.onChange,
+      {super.key});
 
   @override
-  State<PaginationNavigationBar> createState() => _PaginationNavigationBarState();
+  State<PaginationNavigationBar> createState() =>
+      _PaginationNavigationBarState();
 }
 
 class _PaginationNavigationBarState extends State<PaginationNavigationBar> {
@@ -45,11 +47,17 @@ class _PaginationNavigationBarState extends State<PaginationNavigationBar> {
                 ),
 
                 PageButton(
-                    onChange: widget.onChange, selected: page1 == widget.page, page: page1),
+                    onChange: widget.onChange,
+                    selected: page1 == widget.page,
+                    page: page1),
                 PageButton(
-                    onChange: widget.onChange, selected: page2 == widget.page, page: page2),
+                    onChange: widget.onChange,
+                    selected: page2 == widget.page,
+                    page: page2),
                 PageButton(
-                    onChange: widget.onChange, selected: page3 == widget.page, page: page3),
+                    onChange: widget.onChange,
+                    selected: page3 == widget.page,
+                    page: page3),
 
                 TextButton(
                   onPressed: () {
@@ -82,6 +90,10 @@ class _PaginationNavigationBarState extends State<PaginationNavigationBar> {
       page1 = widget.page;
       page2 = widget.page + 1;
       page3 = widget.page + 2;
+    } else if (widget.page >= widget.finalPage) {
+      page1 = widget.page - 2;
+      page2 = widget.page - 1;
+      page3 = widget.page;
     } else {
       page1 = widget.page - 1;
       page2 = widget.page;
@@ -112,7 +124,6 @@ class PageButton extends StatelessWidget {
           backgroundColor: selected
               ? MaterialStateProperty.all(Colors.red)
               : MaterialStateProperty.all(Colors.white),
-              
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),

@@ -24,6 +24,7 @@ class _InitialScreenState extends State<InitialScreen> {
   List<HeroDTO> heroes = [];
   int page = 1;
   String searchName = '';
+  int finalPage = 1;
 
   @override
   void initState() {
@@ -60,9 +61,9 @@ class _InitialScreenState extends State<InitialScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: PaginationNavigationBar(page, (nextPage) {
+      bottomNavigationBar: PaginationNavigationBar(page, finalPage, (nextPage) {
         setState(() {
-          if (nextPage > 0 && nextPage != page) {
+          if (nextPage > 0 && nextPage != page && nextPage<=finalPage) {
             page = nextPage;
             loadData();
           }
@@ -80,6 +81,7 @@ class _InitialScreenState extends State<InitialScreen> {
     .then((output) => {
       setState(() {
         heroes = output.heroes;
+        finalPage = output.finalPage;
       })
     });
 
