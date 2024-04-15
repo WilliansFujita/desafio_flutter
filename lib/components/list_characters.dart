@@ -1,5 +1,6 @@
 import 'package:desafio_flutter_hero/components/item_list_character.dart';
 import 'package:desafio_flutter_hero/dto/hero_dto.dart';
+import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 
 class ListCharacters extends StatelessWidget {
@@ -19,7 +20,7 @@ class ListCharacters extends StatelessWidget {
           width: 360,
           height: 30,
           alignment: AlignmentDirectional.center,
-          color: const Color.fromRGBO(212, 20, 26, 100),
+          color: CustomColorTheme.customRed,
           child: const Text(
             'Nome',
             style: TextStyle(

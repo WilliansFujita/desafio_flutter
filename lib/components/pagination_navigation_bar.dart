@@ -1,3 +1,4 @@
+import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 
 class PaginationNavigationBar extends StatefulWidget {
@@ -41,7 +42,7 @@ class _PaginationNavigationBarState extends State<PaginationNavigationBar> {
                   },
                   child: const Icon(
                     Icons.arrow_left_outlined,
-                    color: Color.fromRGBO(212, 20, 26, 100),
+                    color: CustomColorTheme.customRed,
                     size: 58,
                   ),
                 ),
@@ -64,20 +65,14 @@ class _PaginationNavigationBarState extends State<PaginationNavigationBar> {
                     widget.onChange(widget.page + 1);
                   },
                   child: const Icon(Icons.arrow_right_outlined,
-                      color: Color.fromRGBO(
-                        212,
-                        20,
-                        26,
-                        100,
-                      ),
+                      color: CustomColorTheme.customRed,
                       size: 58),
                 ),
-                //Icon(Icons.arrow_right_outlined,color: Color.fromRGBO(212, 20, 26, 100, ),size:58)
               ],
             ),
           ),
           Container(
-            color: const Color.fromRGBO(212, 20, 26, 100),
+            color: CustomColorTheme.customRed,
             height: 12,
           ),
         ],
@@ -122,15 +117,15 @@ class PageButton extends StatelessWidget {
       },
       style: ButtonStyle(
           backgroundColor: selected
-              ? MaterialStateProperty.all(Colors.red)
+              ? MaterialStateProperty.all(CustomColorTheme.customRed)
               : MaterialStateProperty.all(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
-                  side: const BorderSide(color: Colors.red)))),
+                  side: const BorderSide(color: CustomColorTheme.customRed)))),
       child: Text(
         page.toString(),
-        style: TextStyle(color: selected ? Colors.white : Colors.red),
+        style: TextStyle(color: selected ? Colors.white : CustomColorTheme.customRed),
       ),
     );
   }

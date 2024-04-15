@@ -1,3 +1,4 @@
+import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -42,7 +43,7 @@ class ItemListCharacter extends StatelessWidget {
         Container(
           width: 360,
           height: 2,
-          color: const Color.fromRGBO(212, 20, 26, 100),
+          color: CustomColorTheme.customRed,
         )
       ],
     );

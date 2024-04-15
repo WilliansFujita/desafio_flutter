@@ -1,3 +1,4 @@
+import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -16,25 +17,25 @@ class TextTitle extends StatelessWidget {
               'BUSCA',
               style: TextStyle(
                   fontSize: 16,
-                  color: Color.fromRGBO(212, 20, 26, 100),
+                  color: CustomColorTheme.customRed,
                   fontWeight: FontWeight.bold, ),
             ),
             Text(
               ' MARVEL',
               style: TextStyle(
                   fontSize: 16,
-                  color: Color.fromRGBO(212, 20, 26, 100),
+                  color: CustomColorTheme.customRed,
                   fontWeight: FontWeight.bold),
             ),
             Text(
               ' TEST',
               style: TextStyle(
-                  fontSize: 16, color: Color.fromRGBO(212, 20, 26, 100)),
+                  fontSize: 16, color: CustomColorTheme.customRed),
             ),
             Text(
               ' FRONT-END',
               style: TextStyle(
-                  fontSize: 16, color: Color.fromRGBO(212, 20, 26, 100)),
+                  fontSize: 16, color: CustomColorTheme.customRed),
             )
           ],
         ),
@@ -42,7 +43,7 @@ class TextTitle extends StatelessWidget {
           
           children: [
             Container(
-              color: const Color.fromRGBO(212, 20, 26, 100),
+              color: CustomColorTheme.customRed,
               width: 54,
               height: 4,
              

@@ -1,3 +1,4 @@
+import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 
 class SearchHeroBar extends StatelessWidget {
@@ -14,7 +15,7 @@ class SearchHeroBar extends StatelessWidget {
         const Text(
           'Nome do Personagem',
           style:
-              TextStyle(fontSize: 16, color: Color.fromRGBO(212, 20, 26, 100)),
+              TextStyle(fontSize: 16, color:CustomColorTheme.customRed),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 5),
