@@ -1,3 +1,4 @@
+import 'package:desafio_flutter_hero/components/hero_image.dart';
 import 'package:desafio_flutter_hero/theme/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,17 +17,7 @@ class ItemListCharacter extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(18.0),
-              child: Container(
-                width: 58,
-                height: 58,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        fit: BoxFit.fill,
-                        image: NetworkImage(
-                          photoPath,
-                        ))),
-              ),
+              child: HeroImage(photoPath: photoPath),
             ),
             SizedBox(
               width: 220,
